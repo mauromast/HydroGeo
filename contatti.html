@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroGeo s.r.l. - Contatti</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html"><img src="HydroGeo solo.png" alt="HydroGeo s.r.l. Logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="certificazioni.html">CERTIFICAZIONI</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="contatti.html">CONTATTI</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="section-hero page-hero contacts-hero">
+            <div class="container">
+                <h1>Contattaci</h1>
+                <p>Siamo a tua disposizione per qualsiasi informazione o per una consulenza.</p>
+            </div>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="container contact-grid">
+                <div class="contact-details">
+                    <h2>Dove Siamo e Come Contattarci</h2>
+                    <p class="detail-item"><i class="fas fa-map-marker-alt"></i> <strong>Sede Operativa:&nbsp;</strong> Via Costiera, 25 – 47121 Forlì (FC)</p>
+                    <p class="detail-item"><i class="fas fa-map-marker-alt"></i> <strong>Sede Legale:&nbsp;</strong> Via Petrarca, 12 – 81025 Marcianise (CE)</p>
+                    <p class="detail-item phone-number-desktop"><i class="fas fa-phone"></i> <strong>Telefono:&nbsp;</strong> 0823823834</p>
+                    <p class="detail-item phone-number-mobile"><i class="fas fa-phone"></i> <strong>Telefono:</strong> <a href="tel:+390823823834">0823823834</a></p>
+                    <p class="detail-item"><i class="fas fa-envelope"></i> <strong>Email:&nbsp;</strong> <a href="mailto:hydrogeosrl@gmail.com">hydrogeosrl@gmail.com</a></p>
+                    <p class="detail-item"><i class="fas fa-envelope"></i> <strong>PEC:&nbsp;</strong> <a href="mailto:hydrogeosrl@pec.it">hydrogeosrl@pec.it</a></p>
+                    <p class="detail-item"><i class="fas fa-tag"></i> <strong>P. IVA / C.F.:&nbsp;</strong> 01815290612</p>
+                    <p class="detail-item"><i class="fas fa-id-card"></i> <strong>REA:&nbsp;</strong> 124621</p>
+										<div class="social-icons">
+											<a href="https://www.linkedin.com/company/hydrogeo-idrologia-e-geotecnica" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+										</div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2859.901509927954!2d12.213204915649987!3d44.07920407910903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!11.75!4f13.1!3m3!1m2!1s0x477fdba2c3e1e2d7%3A0x7e5f8f3c7e5f8f3c!2sVia%20Costiera%2C%2025%2C%2047121%20Forl%C3%AC%20FC%2C%20Italy!5e0!3m2!1sen!2sit!4v1722096707321!5m2!1sen!2sit" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <h2>Inviaci un Messaggio</h2>
+                <form action="send_email.php" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nominativo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Azienda:</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefono (facoltativo):</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Oggetto:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Messaggio:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+			<div id="footer-placeholder"></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
