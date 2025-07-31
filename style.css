@@ -462,6 +462,39 @@ ul {
     margin-bottom: 40px; /* Space below the grid before the bottom section */
 }
 
+/* --- Media Query per Mobile e Tablet --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        /* Per schermi più piccoli, le colonne si impilano o vanno su 2 colonne */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Rende le colonne reattive */
+        gap: 20px; /* Riduci il gap sul mobile */
+    }
+
+    /* Regola il margine inferiore di tutte le colonne sul mobile */
+    .footer-column {
+        margin-bottom: 20px; /* Aggiungi un margine inferiore per separare le colonne impilate */
+    }
+
+    /* Allineamento del testo nelle colonne per migliore leggibilità su mobile */
+    .footer-column.about-col,
+    .footer-column.links-col,
+    .footer-column.contact-col,
+    .footer-column.map-col {
+        text-align: center; /* Centra il testo delle colonne sul mobile */
+    }
+
+    /* Centra il logo e le icone social se il testo è centrato */
+    .footer-column.about-col img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-column .social-icons {
+        display: flex;
+        justify-content: center; /* Centra le icone social */
+    }
+}
+
 /* Common Footer Column Elements */
 .footer-column img {
     height: 50px; /* Logo height */
@@ -517,10 +550,24 @@ ul {
     display: flex; /* Use flexbox for icon and text alignment */
     align-items: flex-start; /* Align items to the top (icon and text start at same line) */
     margin-bottom: 15px; /* Space between contact lines */
-    white-space: nowrap; /* Prevent text from wrapping to the next line */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
+    /* RIMOSSO: white-space: nowrap; */
+    /* RIMOSSO: overflow: hidden; */
+    /* RIMOSSO: text-overflow: ellipsis; */
+    flex-wrap: wrap; /* Permette al contenuto di andare a capo quando lo spazio è insufficiente */
+    justify-content: flex-start; /* Allinea a sinistra di default */
 }
+
+/* Media Query per centrare gli elementi della colonna contatti su mobile */
+@media (max-width: 768px) {
+    .footer-column.contact-col p {
+        justify-content: center; /* Centra il contenuto del paragrafo su mobile */
+        text-align: center; /* Assicura che il testo all'interno del p sia centrato */
+    }
+    .footer-column.contact-col p i {
+        margin-right: 5px; /* Riduci il margine tra icona e testo sul mobile */
+    }
+}
+
 
 .footer-column.contact-col p i {
     margin-right: 10px; /* Space between icon and text */
@@ -565,6 +612,7 @@ ul {
 .footer-bottom a:hover {
     color: #f4f4f4; /* Blue hover color */
 }
+
 
 /* Stili specifici per le pagine secondarie */
 .page-content {
